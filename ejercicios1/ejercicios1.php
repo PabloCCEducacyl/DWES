@@ -109,8 +109,8 @@ require('216tabla_multiplicar.php');
         if($resultados2grado == "no solucion"){
             echo "<p>No hay soluciones</p>";
         } else if(count($resultados2grado) == 1){
-            echo "<p>Una solución</p>"
-            echo "<p>Solución: $resultados2grado[0]</p>"
+            echo "<p>Una solución</p>";
+            echo "<p>Solución: $resultados2grado[0]</p>";
         } else {
             echo "<p>Solucion 1: $resultados2grado[0]</p>";
             echo "<p>Solucion 2: $resultados2grado[1]</p>";
