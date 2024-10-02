@@ -15,7 +15,7 @@
             if($numeros_aleatorios[$i] < $resultado["menor"]){
                 $resultado["menor"] = $numeros_aleatorios[$i];
             }
-            $media_total += $numeros_aleatorios;
+            $media_total += $numeros_aleatorios[$i];
         }
         $resultado["media"] = $media_total / 33;
         return $resultado;

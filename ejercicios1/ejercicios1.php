@@ -2,6 +2,8 @@
 require('212descomposicion_dinero.php');
 require('213ecuacion_2grado.php');
 require('214numeros_desordenados.php');
+require('215numeros_aleatorios.php');
+require('216tabla_multiplicar.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +15,15 @@ require('214numeros_desordenados.php');
 </head>
 <body>
     <h1>Ejercicios 1</h1>
-    <h2>Ejercicio 212</h2>
+    <ul>
+        <li><a href="#212">Ejercicio 212</a></li>
+        <li><a href="#213">Ejercicio 213</a></li>
+        <li><a href="#214">Ejercicio 214</a></li>
+        <li><a href="#215">Ejercicio 215</a></li>
+        <li><a href="#216">Ejercicio 216</a></li>
+        <li><a href="#217">Ejercicio 217</a></li>
+    </ul>
+    <h2 id="212">Ejercicio 212</h2>
     <form>
         <label for="numero212">Dinero total:</label>
         <input type="number" name="numero212">
@@ -37,7 +47,7 @@ require('214numeros_desordenados.php');
         echo "</table>"
     ?>
     <hr>
-    <h2>Ejercicio 213</h2>
+    <h2 id="213">Ejercicio 213</h2>
     <form>
         <h3>Ecuación segundo grado</h3>
         <math xmlns="http://www.w3.org/1998/Math/MathML"> <!-- copiado de google -->
@@ -101,7 +111,7 @@ require('214numeros_desordenados.php');
         }
     ?>
     <hr>
-    <h2>Ejercicio 214</h2>
+    <h2 id="214">Ejercicio 214</h2>
     <form>
         <h3>Numeros pares desordenados</h3>
         <label for="numero214">Numeros:</label>
@@ -123,5 +133,38 @@ require('214numeros_desordenados.php');
         }
         echo "</table>"
     ?>
+    <hr>
+    <h2 id="215">Ejercicio 215</h2>
+    <?php
+        $resultado215 = numeros_desordenados();
+        echo "<table>";
+        echo "<tr><th>Mayor</th><th>Media</th><th>Menor</th></tr>";
+        echo "<tr><td>{$resultado215['mayor']}</td>";
+        echo "<td>{$resultado215['media']}</td>";
+        echo "<td>{$resultado215['menor']}</td></tr>";
+        echo "</table>"
+    ?>
+    <hr>
+    <h2 id="216">Ejercicio 216</h2>
+    <form>
+        <label for="numero216">Número:</label>
+        <input type="number" name="numero216">
+        <input type="submit" value="Enviar"> 
+    </form>
+    <table>
+    <?php
+        if(!isset($_GET['numero216']) || $_GET['numero216'] == ""){
+            $numero216 = 1;
+        } else {
+            $numero216 = $_GET['numero216'];
+        }
+        $resultado216 = tabla_multiplicar($numero216);
+        echo "<tr><th colspan='2'>Tabla del $numero216</th></tr>";
+        for ($i = 1; $i <= 10; $i++) {
+            echo "<tr><td>$numero216 * $i</td><td>{$resultado216[$i]}</td></tr>";
+        }
+    ?> 
+    </table>
+
 </body>
 </html>
