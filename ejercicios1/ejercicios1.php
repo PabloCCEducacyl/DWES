@@ -1,7 +1,7 @@
 <?php 
 require('212descomposicion_dinero.php');
 require('213ecuacion_2grado.php');
-require('214numeros_desordenados.php')
+require('214numeros_desordenados.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +40,36 @@ require('214numeros_desordenados.php')
     <h2>Ejercicio 213</h2>
     <form>
         <h3>Ecuación segundo grado</h3>
+        <math xmlns="http://www.w3.org/1998/Math/MathML"> <!-- copiado de google -->
+        <mrow>
+            <mi>x</mi>
+            <mo>=</mo>
+            <mfrac>
+            <mrow>
+                <mo>-</mo>
+                <mi>b</mi>
+                <mo>&#x00B1;</mo>
+                <msqrt>
+                <mrow>
+                    <msup>
+                    <mi>b</mi>
+                    <mn>2</mn>
+                    </msup>
+                    <mo>-</mo>
+                    <mn>4</mn>
+                    <mi>a</mi>
+                    <mi>c</mi>
+                </mrow>
+                </msqrt>
+            </mrow>
+            <mrow>
+                <mn>2</mn>
+                <mi>a</mi>
+            </mrow>
+            </mfrac>
+        </mrow>
+        </math><br><br>
+
         <label for="numero213a">a:</label>
         <input type="number" name="numero213a">
         <label for="numero213b">b:</label>
@@ -66,18 +96,12 @@ require('214numeros_desordenados.php')
         }
         echo "Para a=$numero213a, b=$numero213b, c=$numero213c";
         $resultados = ecuacion_2grado($numero213a, $numero213b, $numero213c);
-        if($resultados[0] == 'NAN'){
-            echo "<p>No tiene solución</p>";
-        } else{
-            if($resultados[0] == $resultados[1]){
-                echo "<p>Una solucion: $resultados[0]</p>";
-            } else {
-                echo "<p>Dos soluciones: $resultados[0] y $resultados[1]</p>";
-            }
+        if($resultados == "no solucion"){
+            echo "<p>No hay soluciones</p>";
         }
     ?>
     <hr>
-    <h2>Ejercicio 213</h2>
+    <h2>Ejercicio 214</h2>
     <form>
         <h3>Numeros pares desordenados</h3>
         <label for="numero214">Numeros:</label>

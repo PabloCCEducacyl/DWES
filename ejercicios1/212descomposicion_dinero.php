@@ -18,6 +18,7 @@
                 if($dinero_inicial >= $denominacion){
                     $dinero_descompuesto[$denominacion]++;
                     $dinero_inicial = $dinero_inicial - $denominacion;
+                    break; //no se me ocurre otra forma que con un break, sin el saca billetes que no hacen falta
                 }
             }
         }
