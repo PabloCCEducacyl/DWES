@@ -105,9 +105,15 @@ require('216tabla_multiplicar.php');
             $numero213c = $_GET['numero213c'];
         }
         echo "Para a=$numero213a, b=$numero213b, c=$numero213c";
-        $resultados = ecuacion_2grado($numero213a, $numero213b, $numero213c);
-        if($resultados == "no solucion"){
+        $resultados2grado = ecuacion_2grado($numero213a, $numero213b, $numero213c);
+        if($resultados2grado == "no solucion"){
             echo "<p>No hay soluciones</p>";
+        } else if(count($resultados2grado) == 1){
+            echo "<p>Una solución</p>"
+            echo "<p>Solución: $resultados2grado[0]</p>"
+        } else {
+            echo "<p>Solucion 1: $resultados2grado[0]</p>";
+            echo "<p>Solucion 2: $resultados2grado[1]</p>";
         }
     ?>
     <hr>
