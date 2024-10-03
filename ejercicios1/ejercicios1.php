@@ -4,6 +4,7 @@ require('213ecuacion_2grado.php');
 require('214numeros_desordenados.php');
 require('215numeros_aleatorios.php');
 require('216tabla_multiplicar.php');
+require('217pinta_tabla.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -171,6 +172,29 @@ require('216tabla_multiplicar.php');
         }
     ?> 
     </table>
-
+    <hr>
+    <h2 id="217">Ejercicio 217</h2>
+    <form>
+        <label for="numero216">filas:</label>
+        <input type="number" name="numero216">
+        <label for="numero216">columnas:</label>
+        <input type="number" name="numero216">
+        <input type="submit" value="Enviar"> 
+    </form>
+    <table>
+    <?php
+        if(!isset($_GET['columnas217']) || $_GET['columnas217'] == ""){
+            $columnas217 = 3;
+        } else {
+            $columnas217 = $_GET['columnas217'];
+        }
+        if(!isset($_GET['filas217']) || $_GET['filas217'] == ""){
+            $filas217 = 4;
+        } else {
+            $filas217 = $_GET['filas217'];
+        }
+        echo tabla_multiplicar($filas217, $columnas217);
+    ?> 
+    </table>
 </body>
 </html>
