@@ -5,7 +5,7 @@ function ecuacion_2grado($a, $b, $c){
             return "no solucion";
         }
     } else {
-        $solucion1 = -$c / b;
+        $solucion1 = -$c / $b;
         return [$solucion1];
     }
 
@@ -18,7 +18,7 @@ function ecuacion_2grado($a, $b, $c){
         return [$solucion];
     } else {
         $solucion1 = (-$b + sqrt($discriminante)) / ($a * 2);
-        $solucion1 = (-$b - sqrt($discriminante)) / ($a * 2);
+        $solucion2 = (-$b - sqrt($discriminante)) / ($a * 2);
         return [$solucion1, $solucion2];
     }
 
