@@ -13,12 +13,13 @@
             "Australia" => "Canberra",
         ];
         $capitales = [];
-        foreach($pais_capital as $pais => $capital){
+        foreach($pais_capital as $paises => $capital){
             $capitales[] = $capital;
         }
         if($pais == "todos"){
             return $capitales;
-            } else {
+            } 
+        else {
             if(array_key_exists($pais, $pais_capital)){
                 return $pais_capital[$pais];
             } else {
