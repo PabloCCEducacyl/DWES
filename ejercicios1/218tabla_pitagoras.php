@@ -8,12 +8,12 @@
             for($j = 0; $j < $filas+1; $j++){
                 if($j == 0){
                     if($i == 0){
-                        $numero = 'x';
+                        $numero = '<b><u>x</u></b>';
                     } else {
-                        $numero = $i;
+                        $numero = "<b><u>$i</u></b>";
                     }
                 } else if($i == 0){
-                    $numero = $j;
+                    $numero = "<b><u>$j</u></b>";
                 } else {
                     $numero = $i * $j;
                 }

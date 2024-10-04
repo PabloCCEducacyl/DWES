@@ -24,7 +24,7 @@ require('218tabla_pitagoras.php');
         <li><a href="#215">Ejercicio 215</a></li>
         <li><a href="#216">Ejercicio 216</a></li>
         <li><a href="#217">Ejercicio 217</a></li>
-        <li><a href="#217">Ejercicio 218</a></li>
+        <li><a href="#218">Ejercicio 218</a></li>
     </ul>
     <hr>
     <h2 id="212">Ejercicio 212</h2>
