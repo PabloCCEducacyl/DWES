@@ -21,5 +21,6 @@
             }
             $tabla .= "</tr>";
         }
+        $tabla .= "</table>";
         return $tabla;
     }

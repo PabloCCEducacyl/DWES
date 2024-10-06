@@ -6,6 +6,9 @@ require('215numeros_aleatorios.php');
 require('216tabla_multiplicar.php');
 require('217pinta_tabla.php');
 require('218tabla_pitagoras.php');
+require('219array_fm.php');
+require('220alturas.php');
+require('221alturas2.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +17,14 @@ require('218tabla_pitagoras.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios 1</title>
     <meta name="author" content="Pablo Campuzano Cuadrado">
+    <style>
+        input {
+            margin-bottom: 8pt;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ejercicios 1</h1>
+    <h1 id="titulo">Ejercicios 1</h1>
     <ul>
         <li><a href="#212">Ejercicio 212</a></li>
         <li><a href="#213">Ejercicio 213</a></li>
@@ -25,6 +33,9 @@ require('218tabla_pitagoras.php');
         <li><a href="#216">Ejercicio 216</a></li>
         <li><a href="#217">Ejercicio 217</a></li>
         <li><a href="#218">Ejercicio 218</a></li>
+        <li><a href="#219">Ejercicio 219</a></li>
+        <li><a href="#220">Ejercicio 220</a></li>
+        <li><a href="#221">Ejercicio 221</a></li>
     </ul>
     <hr>
     <h2 id="212">Ejercicio 212</h2>
@@ -220,5 +231,52 @@ require('218tabla_pitagoras.php');
             $filas218 = $_GET['filas218'];
         }
         echo crear_tabla_pitagoras($filas218,$columnas218) ?>
+    <hr>
+    <h2 id="219">Ejercicio 219</h2>
+    <table rules='all' border="solid black 1px">
+    <tr>
+        <th>g</th><th>val</th>
+    </tr>
+        <?php 
+        $array_fm = crear_array_fm();
+        foreach($array_fm as $fm => $valor){
+            echo "<tr><td>$fm</td><td>$valor</td><tr>";
+        }
+        ?>
+    </table>
+    <hr>
+    <h2 id="220">Ejercicio 220</h2>
+    <?php echo tabla_altura()?>
+    <hr>
+    <h2 id="221">Ejercicio 221</h2>
+    <form>
+        <label for="altura221">altura:</label>
+        <input type="number" name="altura221" placeholder="Si 175 => media = 175">
+        <input type="submit" value="Enviar"> 
+    </form>
+    <?php 
+        $media = true;
+        if(isset($_GET['altura221'])){
+            if(!is_numeric($_GET['altura221'])){
+                $altura221 = 0;
+            } else{
+                $altura221 = $_GET['altura221'];
+            }
+        } else {
+            $altura221 = 0;
+            $media = false;
+        } 
+        $res221 = tabla_altura2($altura221);
+        echo $res221["tabla"];
+        if($media){
+            $textomedia = match($res221["media"]){
+                2 => "El usuario es mas alto que la media",
+                1 => "El usuario es mas bajo que la media",
+                0 => "El usuario es igual de alto que la media",
+            };
+            echo "<p>$textomedia</p>";
+        }
+    ?>
+    <a href="#titulo">Subir</a>
 </body>
 </html>
