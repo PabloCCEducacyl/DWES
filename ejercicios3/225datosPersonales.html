@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 225</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form action="225datosPersonales.php" method="get">
+        <label for="nombre">Nombre:
+            <input type="text" name="nombre" id="nombre">
+        </label>
+        <label for="primerape">Primer Apellido:
+            <input type="text" name="primerape" id="primerape">
+        </label>
+        <label for="segunape">Segundo Apellido:
+            <input type="text" name="segunape" id="segunape">
+        </label>
+        <label for="email">Email:
+            <input type="email" name="email" id="email">
+        </label>
+        <label for="annonac">Año Nacimiento:
+            <input type="date" name="annonac" id="annonac">
+        </label>
+        <label for="telefono">Teléfono
+            <input type="text" name="telefono" id="telefono">
+        </label>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
