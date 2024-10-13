@@ -137,7 +137,9 @@
         foreach($resultados228 as $cuenta => $res){
             echo "$cuenta: $res<br>";
         }
-        
     ?>
+    <hr>
+    <h2 id="229">Ejercicio 229</h2>
+    <a href="229matematicas.php">Ir a ejercicio 229</a>
 </body>
 </html>
