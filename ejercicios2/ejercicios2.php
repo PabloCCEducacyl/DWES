@@ -22,6 +22,9 @@
         <li><a href="#223">Ejercicio 223</a></li>
         <li><a href="#225">Ejercicio 225</a></li>
         <li><a href="#226">Ejercicio 226</a></li>
+        <li><a href="#227">Ejercicio 227</a></li>
+        <li><a href="#228">Ejercicio 228</a></li>
+        <li><a href="#229">Ejercicio 229</a></li>
     </ul>
     <hr>
     <h2 id="222">Ejercicio 222</h2>

@@ -19,7 +19,4 @@
         }
         return $res;
     }
-    echo "<pre>";
-    print_r(cuentas228(10, 0));
-    echo "</pre>";
     
