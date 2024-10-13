@@ -32,5 +32,7 @@
             ?>
         </tr>
     </table>
+    <a href="ejercicios2.php">Volver</a>
+
 </body>
 </html>
