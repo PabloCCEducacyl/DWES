@@ -15,10 +15,12 @@
                 } else {
                     $nuevafrase .= $letras[$numeroletra+$cantidad-count($letras)];
                 }
+            } else {
+                $nuevafrase .= $letra;
             }
         }
         return $nuevafrase;
     }
-    $frase = "holZ";
+    $frase = "a holZ33";
     $frasedesplazada = desplazar($frase, 1);
     echo "<p>". $frasedesplazada. "</p>";

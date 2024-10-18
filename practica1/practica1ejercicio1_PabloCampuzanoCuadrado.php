@@ -51,7 +51,7 @@
         }
         function arrayAleatorio(int $num_numeros, int $num_min, int $num_max) {
             $numeros = [];
-            $punto_medio = $num_max - $num_min;
+            $punto_medio = ($num_max + $num_min) / 2;
             $contados = [
                 "menor" => 0,
                 "mayor" => 0
