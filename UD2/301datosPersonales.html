@@ -11,30 +11,56 @@
             width: 400px;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const estudiosSelect = document.getElementById('estudios');
+            const estudiosTexto = document.querySelector('input[name="estudios-texto"]');
+
+            estudiosTexto.disabled = true;
+
+            estudiosSelect.addEventListener('change', function() {
+                if (estudiosSelect.value === 'fp' || estudiosSelect.value === 'universidad') {
+                    estudiosTexto.disabled = false;
+                } else {
+                    estudiosTexto.disabled = true;
+                    estudiosTexto.value = '';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>gabino gordo</h1>
         <form method="POST" action="301datosPersonales.php">
             <label>Nombre:
-                <input type="text"></label>
+                <input type="text" name="nombre"></label>
             <label>Primer Apellido:
-                <input type="text"></label>
+                <input type="text" name="prim_apellido"></label>
             <label>Segundo Apellido:
-                <input type="text"></label>
+                <input type="text" name="secu_apellido"></label>
             <label>DNI:
-                <input type="text"></label>
+                <input type="text" name="dni"></label>
             <label>email:
-                <input type="text"></label>
+                <input type="email" name="email"></label>
             <label>fecha de nacimiento:
-                <input type="text"></label>
+                <input type="date" name="fecha_nac"></label>
             <label>teléfono:
+                <input type="tel" name="telefono"></label>
+            <label>sexo:
                 <input type="text"></label>
             <label>estudios:
-                <input type="text"></label>
+                <select name="estudios" id="estudios">
+                    <option value="eso">ESO</option>
+                    <option value="bachiller">Bachiller</option>
+                    <option value="fp">FP</option>
+                    <option value="universidad">Universidad</option>
+                </select>
+                <input type="text" name="estudios-texto">
+            </label>
             <label>idiomas:
                 <input type="text"></label>
             <label>foto:
-                <input type="text"></label>
+                <input type="file" accept="image/png, image/jpeg" name="foto"></label>
             <label>curriculum:
                 <input type="text"></label>
             <input type="submit">
