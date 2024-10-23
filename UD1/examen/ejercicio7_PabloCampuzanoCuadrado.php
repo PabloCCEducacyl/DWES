@@ -23,6 +23,7 @@
         $pesos[] = $peso;
     }
     $muebles_assoc = ordenarArrayAsociativo($muebles_assoc);//no ordena
+    print_r($muebles_assoc);
     $nuevo_muebles_assoc = [];
     
     for($i = count($muebles_assoc)-1; $i >= 0; $i--){
@@ -53,11 +54,7 @@
                 }
             }
         } while(!$ordenado);
-        $nuevoarray = [];
-        for($i = 0; $i < count($valores); $i++){
-            //array_push($nuevoarray, $claves[$i], $valor[$i]);
-            //no se como insertar valores a un array asociativo
-        }
+        $nuevoarray = array_combine($claves, $valores);
         return $nuevoarray;
         //return $array;
     }
