@@ -7,7 +7,7 @@
         echo "<p class='info'>{$_GET['info']}</p>";
     }
     ?>
-<form method='GET' action="../controlador/agregar_alumno.php">
+<form method='POST' action="../controlador/agregar_alumno.php">
     <label>DNI:
         <input type="text" name="dni"></label>
     <label>Nombre:
@@ -22,3 +22,4 @@
         <input type="text" name="curso"></label>
     <input type="submit" name="Enviar">
 </form>
+<?php include('footer.php');?>
