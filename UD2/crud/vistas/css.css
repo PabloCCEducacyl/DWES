@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(185, 143, 224);
+}
+.error{
+    color:red;
+}
+.info{
+    color: rgb(0, 132, 255);
+}
