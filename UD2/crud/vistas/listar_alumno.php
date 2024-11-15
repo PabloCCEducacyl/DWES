@@ -1,9 +1,10 @@
 <?php
     include('encabezado.php');
     include('../config/conexion.php');
+
 ?>
     <h2>Lista de alumnos</h2>
-    <table rules='all' style='border: solid 1px black'>
+    <table>
     <tr>
         <th>DNI</th>
         <th>Nombre</th>

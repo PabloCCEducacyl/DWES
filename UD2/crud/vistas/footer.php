@@ -1,5 +1,6 @@
+</main>
 <footer>
-    <h2>venvenido</h2>
+    <h3>Pablo Campuzano Cuadrado</h3>
 </footer>
 </body>
 </html>

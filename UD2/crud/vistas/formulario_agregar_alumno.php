@@ -1,12 +1,7 @@
 <?php
     include('encabezado.php');
-    if(isset($_GET['error'])){
-        echo "<p class='error'>{$_GET['error']}</p>";
-    }
-    if(isset($_GET['info'])){
-        echo "<p class='info'>{$_GET['info']}</p>";
-    }
     ?>
+<h2>Agregar alumno</h2>
 <form method='POST' action="../controlador/agregar_alumno.php">
     <label>DNI:
         <input type="text" name="dni"></label>
@@ -20,6 +15,6 @@
         <input type="string" name="telefono"></label>
     <label>Curso:
         <input type="text" name="curso"></label>
-    <input type="submit" name="Enviar">
+    <input type="submit" value="Enviar">
 </form>
 <?php include('footer.php');?>
