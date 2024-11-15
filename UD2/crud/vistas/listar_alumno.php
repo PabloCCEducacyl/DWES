@@ -12,6 +12,8 @@
         <th>Email</th>
         <th>Telefono</th>
         <th>Curso</th>
+        <th>Modificar</th>
+        <th>Eliminar</th>
     </tr>
 <?php
     foreach($mysqli->query('SELECT * FROM alumnos') as $fila){
@@ -22,6 +24,8 @@
         echo "<td>{$fila['email']}</td>";
         echo "<td>{$fila['telefono']}</td>";
         echo "<td>{$fila['curso']}</td>";
+        echo "<td><a><img src='Alberto.webp'></a></td>";
+        echo "<td><a><img src='Alberto.webp'></a></td>";
         echo "</tr>";
     }
     echo "</table>";

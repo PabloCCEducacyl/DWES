@@ -41,6 +41,7 @@ input[type="string"] {
     margin: 5px 0 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: inset 1px 1px 1px black;
 }
 input[type="submit"] {
     width: 100%;
@@ -147,17 +148,26 @@ table td {
     border: #111 solid 1px;
     background-color: white;
 }
+table td img {
+    max-width: 100px;
+}
 table tr:nth-child(odd) > td {
     background-color: lightgray;
 }
+
 footer {
     background-color: #333;
     color: white;
     padding: 10px 0;
     position: fixed;
+    display: flex;
+    flex-direction: row;
     width: 100%;
     bottom: 0;
 }
 footer > h3 {
     margin-left: 20px;
+}
+footer img {
+    max-height: 48px;
 }

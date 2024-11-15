@@ -28,7 +28,7 @@
     <form method='POST'>
         <input type="hidden" name="eliminar" value="1">
         <label>DNI a borrar:
-            <input type="text" name="dni"></label>
+            <input type="text" required name="dni"></label>
         <input type="submit" name="Enviar">
     </form>
 <?php
