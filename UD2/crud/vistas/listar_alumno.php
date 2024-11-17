@@ -24,8 +24,9 @@
         echo "<td>{$fila['email']}</td>";
         echo "<td>{$fila['telefono']}</td>";
         echo "<td>{$fila['curso']}</td>";
-        echo "<td><a><img src='Alberto.webp'></a></td>";
-        echo "<td><a><img src='Alberto.webp'></a></td>";
+        echo "<td><form method='POST' id='formulario-editar-lista'action='formulario_modificar_alumno.php'><input type='hidden' name='buscar' value='1'>
+            <input type='hidden' name='dni' value={$fila['dni']}><input type='image' src='iconos/modificar.png'></form></td>";
+        echo "<td><a href='eliminar_alumno.php?eliminar_de_lista={$fila['dni']}'><img src='iconos/eliminar.png'></a></td>";
         echo "</tr>";
     }
     echo "</table>";

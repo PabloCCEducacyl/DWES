@@ -25,12 +25,32 @@
     }
 ?>
     <h2>Eliminar alumno</h2>
-    <form method='POST'>
+    <form method='POST' id="formularioEliminar" onsubmit="return confirmarEliminar()">
         <input type="hidden" name="eliminar" value="1">
         <label>DNI a borrar:
-            <input type="text" required name="dni"></label>
+            <input type="text" required name="dni" 
+            value="<?php if(isset($_GET['eliminar_de_lista'])){echo $_GET['eliminar_de_lista'];}?>">
+            <!--si viene de listar se autocompleta--></label>
         <input type="submit" name="Enviar">
     </form>
+
+    <script defer>
+        function confirmarEliminar() {
+            return confirm('¿Estás seguro de que deseas eliminar este alumno?');
+        }
+
+        <?php
+            if(isset($_GET['eliminar_de_lista'])){ //si viene de listar se sube el formulario
+                                                   //directamente con php
+                echo "                             
+                window.onload = function() {
+                    if(confirmarEliminar()){
+                        document.getElementById('formularioEliminar').submit();
+                    }
+                };";
+            }
+        ?>
+    </script>
 <?php
     include('footer.php')
 ?>

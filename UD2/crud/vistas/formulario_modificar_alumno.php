@@ -1,6 +1,5 @@
 <?php 
-        include('encabezado.php');
-?>
+        include('encabezado.php');?>
     <h2>Modificar alumno</h2>
     <?php
 
@@ -40,7 +39,7 @@
             $numBuscar = $resBuscar->num_rows;
             if($numBuscar == 0){
                 $mysqli->close();
-                header("Location: formulario_modificar_alumno.php?error=DNI no registrado");
+                header("Location: formulario_modificar_alumno.php?error=DNI no registrado <pre>{$dni}</pre>");
             } else {
                 $resBuscarassoc = $resBuscar->fetch_assoc();
                 $nombre = $resBuscarassoc['nombre'];
