@@ -5,15 +5,12 @@
     <header>
         <div>
             <img src="logo.avif" alt="logo">
-            <h1><a href="index.php">CRUD</a></h1>
+            <h1><a href="index.php">CRUD GRAGAS</a></h1>
         </div>
         <?php
             if(basename($_SERVER['REQUEST_URI']) != 'index.php'){
               echo "<ul class='lista-header'>
-                    <li><a href='formulario_agregar_alumno.php'>Agregar</a></li>
-                    <li><a href='listar_alumno.php'>Listar</a></li>
-                    <li><a href='formulario_modificar_alumno.php'>Modificar</a></li>
-                    <li><a href='eliminar_alumno.php'>Eliminar</a></li>
+                    <li><a href='formulario_agregar_proyecto.php'>Agregar</a></li>
                     </ul>";
             }
         ?>
