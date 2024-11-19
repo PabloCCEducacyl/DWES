@@ -1,5 +1,5 @@
 <?php include('encabezado.php')?>
-<form action="">
+<form method="post" action="../controlador/agregar_proyecto.php" enctype="multipart/form-data">
     <label>Titulo:
         <input type="text" name="titulo" id="titulo"></label>
     <label>Descripción:
@@ -12,5 +12,8 @@
         <input type="text" name="fecha_presentacion" id="fecha_presentacion"></label>
     <label>Curso:
         <input type="text" name="curso" id="curso"></label>
+    <label>PDF:
+        <input type="file" name="pdf" id="pdf" accept="application/pdf"></label>
+    <input type="submit" value="Enviar">
 </form>
 <?php include('footer.php')?>

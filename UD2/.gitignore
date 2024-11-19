@@ -1,2 +1,4 @@
 datosPersonales/*
 datosPersonales/
+archivos/
+!archivos/.gitkeep
