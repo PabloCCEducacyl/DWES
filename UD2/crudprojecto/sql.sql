@@ -4,7 +4,7 @@ CREATE TABLE `proyecto` (
   `descripcion` text DEFAULT NULL,
   `periodo` varchar(50) NOT NULL,
   `curso` varchar(20) NOT NULL,
-  `logotipo` blob NOT NULL,
+  `logotipo` mediumblob NOT NULL,
   `pdf_proyecto` varchar(255) NOT NULL,
   `fecha_presentación` date DEFAULT NULL,
   `nota` int(11) DEFAULT NULL,

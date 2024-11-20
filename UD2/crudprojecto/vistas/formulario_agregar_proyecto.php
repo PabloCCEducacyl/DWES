@@ -9,9 +9,9 @@
     <label>Curso:
         <input type="text" name="curso" id="curso"></label>
     <label>Fecha presentación:
-        <input type="text" name="fecha_presentacion" id="fecha_presentacion"></label>
-    <label>Curso:
-        <input type="text" name="curso" id="curso"></label>
+        <input type="date" name="fecha_presentacion" id="fecha_presentacion"></label>
+    <label>Logotipo:
+        <input type="file" name="logotipo" id="logotipo" accept="image/png, image/jpeg"></label>
     <label>PDF:
         <input type="file" name="pdf" id="pdf" accept="application/pdf"></label>
     <input type="submit" value="Enviar">
