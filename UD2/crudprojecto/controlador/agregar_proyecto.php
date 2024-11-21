@@ -14,18 +14,28 @@
     move_uploaded_file($pdf["tmp_name"], "../archivos/" . $proximoID . ".pdf");
     
     $titulo = $_POST['titulo'];
-    $descripccion ? $_POST['descripccion'] : '';
+    $descripccion = $_POST['descripccion'] ?? '';
     $periodo = $_POST['periodo'];
     $fecha_presentacion = $_POST['fecha_presentacion'];
     $curso = $_POST['curso'];
     $nota = $_POST['nota'];
-    $insertarProyectoSQL = $conexion->prepare("insert into proyecto (titulo, descripcion, periodo, curso, logotipo, pdf_proyecto, fecha_presentación, nota) values (:titulo, :descripcion, :periodo, :curso, :logotipo, :pdf_proyecto, :fecha_presentación, :nota);");
+    $insertarProyectoSQL = $conexion->prepare("INSERT INTO proyecto 
+    (titulo, descripccion, periodo, curso, logotipo, pdf_proyecto, fecha_presentacion, nota) 
+    VALUES 
+    (:titulo, :descripccion, :periodo, :curso, :logotipo, :pdf_proyecto, :fecha_presentacion, :nota)");
     $insertarProyectoSQL->bindParam(":titulo", $titulo, PDO::PARAM_STR);
     $insertarProyectoSQL->bindParam(":descripcion", $descripcion, PDO::PARAM_STR);
     $insertarProyectoSQL->bindParam(":periodo", $periodo, PDO::PARAM_STR);
     $insertarProyectoSQL->bindParam(":curso", $curso, PDO::PARAM_STR);
     $insertarProyectoSQL->bindParam(":logotipo", $logotipo, PDO::PARAM_LOB);
-    $insertarProyectoSQL->bindParam(":pdf_proyecto", "$proximoID.pdf", PDO::PARAM_STR);
+    $direccionPDF = "{$proximoID}.pdf";
+    $insertarProyectoSQL->bindParam(":pdf_proyecto", $direccionPDF, PDO::PARAM_STR);
     $insertarProyectoSQL->bindParam(":fecha_presentacion", $fecha_presentacion, PDO::PARAM_STR);
     $insertarProyectoSQL->bindParam(":nota", $nota, PDO::PARAM_STR);
-    
+    $insertarProyectoSQL->execute();
+    print_r($resInsertar);
+    if($resInsertar){
+        header("Location:../vistas/formulario_agregar_proyecto.php?info='Proyecto introducido correctamente'");
+    } else {
+        header("Location:../vistas/formulario_agregar_proyecto.php?error='Ha habido un error: {$insertarProyectoSQL->errorCode()}'");
+    }

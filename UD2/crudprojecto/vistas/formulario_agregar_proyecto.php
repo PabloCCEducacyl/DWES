@@ -14,6 +14,8 @@
         <input type="file" name="logotipo" id="logotipo" accept="image/png, image/jpeg"></label>
     <label>PDF:
         <input type="file" name="pdf" id="pdf" accept="application/pdf"></label>
+    <label>Nota:
+        <input type="number" name="nota" id="nota"></label>
     <input type="submit" value="Enviar">
 </form>
 <?php include('footer.php')?>
