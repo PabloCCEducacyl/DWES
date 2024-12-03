@@ -16,7 +16,7 @@
         <th>Eliminar</th>
     </tr>
 <?php
-    foreach($mysqli->query('SELECT * FROM alumnos') as $fila){
+    foreach($mysqli->query('SELECT * FROM alumno') as $fila){
         echo "<tr>";
         echo "<td>{$fila['dni']}</td>";
         echo "<td>{$fila['nombre']}</td>";
@@ -30,5 +30,39 @@
         echo "</tr>";
     }
     echo "</table>";
-    include('footer.php');
+?>
+    <h2>Lista de proyectos</h2>
+    <table>
+    <tr>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Periodo</th>
+        <th>Curso</th>
+        <th>Fecha presentación</th>
+        <th>Logotipo</th>
+        <th>PDF</th>
+        <th>Nota</th>
+    </tr>
+    <?php
+        foreach($mysqli->query('SELECT * FROM proyecto') as $proyecto){
+        echo "<tr>";
+        echo "<td>{$proyecto['titulo']}</td>";
+        echo "<td>{$proyecto['descripcion']}</td>";
+        echo "<td>{$proyecto['periodo']}</td>";
+        echo "<td>{$proyecto['curso']}</td>";
+        echo "<td>{$proyecto['fecha_presentacion']}</td>";
+        echo "<td><img src='data:image/png;base64,{$proyecto['logotipo']}'</td>";
+        echo "<td><a href='../archivos/{$proyecto['pdf_proyecto']}'>Ver</a></td>";
+        echo "<td>{$proyecto['nota']}</td>";
+
+        echo "</tr>";
+        }
     ?>
+
+
+    </table>
+
+
+<?php
+include('footer.php');
+?>

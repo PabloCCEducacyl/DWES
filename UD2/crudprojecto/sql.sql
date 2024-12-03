@@ -6,7 +6,7 @@ CREATE TABLE `proyecto` (
   `curso` varchar(20) NOT NULL,
   `logotipo` mediumblob NOT NULL,
   `pdf_proyecto` varchar(255) NOT NULL,
-  `fecha_presentación` date DEFAULT NULL,
+  `fecha_presentacion` date DEFAULT NULL,
   `nota` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_proyecto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -1,0 +1,2 @@
+El script 'annadirtarea.php' no recoge el campo imagen de ninguna forma.
+Lo de mostrar las taras ya completadas debería ir pero no va.

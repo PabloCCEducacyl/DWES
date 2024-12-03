@@ -32,7 +32,7 @@
         if(isset($_POST['buscar'])){
             include('../config/conexion.php');
             $dni = $_POST['dni'];
-            $buscarDNISQL = $mysqli->prepare('SELECT * FROM alumnos WHERE DNI=?');
+            $buscarDNISQL = $mysqli->prepare('SELECT * FROM alumno WHERE DNI=?');
             $buscarDNISQL->bind_param("s", $dni);
             $buscarDNISQL->execute();
             $resBuscar = $buscarDNISQL->get_result();

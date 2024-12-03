@@ -7,7 +7,7 @@
     $email = $_POST['email'];
     $telefono = $_POST['telefono'];
     $curso = $_POST['curso'];
-    $modificarAlumnoSQL = $mysqli->prepare('UPDATE alumnos SET DNI=?, nombre=?, apellidos=?, email=?, telefono=?, curso=? WHERE DNI=?');
+    $modificarAlumnoSQL = $mysqli->prepare('UPDATE alumno SET DNI=?, nombre=?, apellidos=?, email=?, telefono=?, curso=? WHERE DNI=?');
     $modificarAlumnoSQL->bind_param("sssssss", $dni, $nombre, $apellidos, $email, $telefono, $curso, $viejodni);
     $modificarAlumnoSQL->execute();
     $resModificar = $modificarAlumnoSQL->affected_rows;

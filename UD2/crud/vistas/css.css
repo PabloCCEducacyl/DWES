@@ -6,6 +6,7 @@ body{
 }
 main {
     margin: 20px;
+    margin-bottom: 100px;
 }
 h1 {
     margin-left: 16px;
@@ -35,7 +36,11 @@ label {
 }
 input[type="text"],
 input[type="email"],
-input[type="string"] {
+input[type="string"],
+input[type="date"],
+input[type="file"],
+input[type="number"],
+select {
     width: 100%;
     padding: 8px;
     margin: 5px 0 10px 0;
