@@ -1,0 +1,10 @@
+12345678A,Juan,Pérez González,12/04/2000
+23456789B,María,López Martínez,25/08/2001
+34567890C,Carlos,González Pérez,05/02/1999
+45678901D,Ana,Sánchez Rodríguez,17/06/2000
+56789012E,Luis,Rodríguez Fernández,01/12/1998
+67890123F,Laura,Fernández García,22/09/2001
+78901234G,Javier,Martínez Torres,30/03/1999
+89012345H,Paula,García Lopez,11/11/2000
+90123456I,Sergio,Torres Pérez,07/07/2000
+01234567J,Elena,Pérez Ramírez,14/02/2002

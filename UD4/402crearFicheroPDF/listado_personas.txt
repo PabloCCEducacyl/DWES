@@ -1,0 +1,10 @@
+23456789A,Carmen,Jiménez Moreno,10/02/1975
+34567890B,José,Álvarez Castro,21/08/1980
+45678901C,Raquel,Morales Fernández,03/11/1977
+56789012D,Antonio,Pérez Serrano,14/06/1979
+67890123E,Isabel,González Ruiz,27/09/1983
+78901234F,Francisco,López Navarro,15/12/1974
+89012345G,Luz,Rodríguez Morales,02/05/1978
+90123456H,Manuel,Fernández Díaz,17/03/1976
+01234567I,Marta,Martínez Sánchez,09/07/1982
+12345678J,Pedro,Castro Vázquez,25/01/1976
