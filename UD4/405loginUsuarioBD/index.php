@@ -1,6 +1,11 @@
 <?php
-    if(isset($_SESSION['usuario'])){
-        
+    session_start();
+    if(isset($_SESSION['tipo_usu'])){
+        if($_SESSION['tipo_usu'] == '1'){
+            header('Location: index_usu.php');
+        }else if($_SESSION['tipo_usu'] == '2'){
+            header('Location: index_admin.php');
+        } 
     }
 ?>
 <!DOCTYPE html>
@@ -120,11 +125,6 @@
     </style>
 </head>
 <body>
-    <?php
-        if(isset($_GET['info'])){
-            echo "<p>{$_GET['info']}</p>";
-        }
-    ?>
     <a href="generarUsuarios.php">Insertar Gente</a>
     <h1>Iniciar Sesión</h1>
     <form action="controlador/login.php" method="POST">
