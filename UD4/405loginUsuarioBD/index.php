@@ -1,3 +1,8 @@
+<?php
+    if(isset($_SESSION['usuario'])){
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,8 +120,14 @@
     </style>
 </head>
 <body>
-    <h1>Registro</h1>
-    <form action="controlador/registro.php" method="POST">
+    <?php
+        if(isset($_GET['info'])){
+            echo "<p>{$_GET['info']}</p>";
+        }
+    ?>
+    <a href="generarUsuarios.php">Insertar Gente</a>
+    <h1>Iniciar Sesión</h1>
+    <form action="controlador/login.php" method="POST">
         <div class="form-input">
             <input type="text" name="usuario" id="usuario">
             <label for="usuario">Usuario:</label>
@@ -124,12 +135,6 @@
         <div class="form-input">
             <input type="password" name="contrasena" id="contrasena">
             <label for="usuario">Contraseña:</label>
-        </div>
-        <div class="form-input">
-            <input type="radio" name="tipo_usu" id="tipo_usu1" value="1">
-            <label for="tipo_usu2">admin</label>
-            <input type="radio" name="tipo_usu" id="tipo_usu2" value="2">
-            <label for="tipo_usu2">usuario</label>
         </div>
         <input type="submit" value="Registrar">
     </form>
