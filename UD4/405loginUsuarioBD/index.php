@@ -136,7 +136,7 @@
             <input type="password" name="contrasena" id="contrasena">
             <label for="usuario">Contraseña:</label>
         </div>
-        <input type="submit" value="Registrar">
+        <input type="submit" value="Iniciar Sesión">
     </form>
 </body>
 </html>

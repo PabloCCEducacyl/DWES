@@ -1,0 +1,16 @@
+#form-registro{
+    display: none;
+}
+.menus {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.menus * {
+    padding: 4px;
+    border: grey 1px solid;
+    cursor: pointer;
+}
+.menus *:hover {
+    background-color: lightgrey;
+}
