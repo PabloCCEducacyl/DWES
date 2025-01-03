@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --color-fondo: #f6ded2;
+    --color-primario: #690be9;
+    --color-secundario: #d30b90;
+    --color-secundario-2: #810955;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+    font-size: larger;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+}
+
+.menu-escondido {
+    display: none;
+}
+.menus {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.menus * {
+    padding: 8px;
+    background-color: var(--color-secundario);
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.5s;
+
+}
+.menus *:hover {
+    background-color: var(--color-secundario-2);
+}
+.menu-activo {
+    background-color: var(--color-secundario-2);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 200px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+label:has(input[type="radio"]) {
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    background-color: red;
+    padding: 8px;
+    color: white;
+    position: fixed;
+    top: 2px;
+    left: 50%;
+}
+
+.titulo-login {
+    background-color: var(--color-primario);
+    font-size: 2em;
+    color: white
+}
+
+.cuadrado-guay {
+    box-shadow: 7px 7px black
+}

@@ -9,13 +9,18 @@ menuBotonLogin.addEventListener("click", mostrarForm)
 menuBotonRegistro.addEventListener("click", mostrarForm)
 
 function mostrarForm(event){
-    let formAMostrar = event.target.parentElement.id;
-    
+    let formAMostrar = event.target.id;
+    console.log("meparto")
+    console.log(formAMostrar)
     if(formAMostrar == "menu-login"){
+        menuBotonLogin.classList.add('menu-activo')
+        menuBotonRegistro.classList.remove('menu-activo')
         formLogin.classList.remove('menu-escondido')
+        formRegistro.classList.add('menu-escondido')
+    } else if(formAMostrar == "menu-registrar"){
+        menuBotonRegistro.classList.add('menu-activo')
+        menuBotonLogin.classList.remove('menu-activo')
         formLogin.classList.add('menu-escondido')
-    } else if(formAMostrar == "menu-registro"){
-        formLogin.classList.add('menu-escondido')
-        formLogin.classList.remove('menu-escondido')
+        formRegistro.classList.remove('menu-escondido')
     };
 }
