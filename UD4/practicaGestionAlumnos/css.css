@@ -64,21 +64,39 @@ label:has(input[type="radio"]) {
     flex-direction: row;
 }
 
+fieldset {
+    border: none;
+    padding: 10px;
+    margin: 0;
+    background-color: var(--color-secundario);
+    color: white;
+}
+legend {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 4px;
+    position: relative;
+    z-index: -1;
+}
+
 .info {
     background-color: red;
     padding: 8px;
     color: white;
     position: fixed;
-    top: 2px;
+    top: 40px;
     left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .titulo-login {
     background-color: var(--color-primario);
     font-size: 2em;
-    color: white
+    color: white;
+    padding: 8px;
 }
 
 .cuadrado-guay {
-    box-shadow: 7px 7px black
+    box-shadow: 7px 7px black;
+    z-index: 2;
 }
