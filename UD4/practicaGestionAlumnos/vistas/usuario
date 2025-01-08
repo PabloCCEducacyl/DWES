@@ -1,0 +1,17 @@
+<?php if(!isset($_SESSION['correo'])){
+    header('controlador/cerrar_sesion.php');
+}?>
+<h1>Bienvenido</h1>
+<h2><?=$_SESSION['nombre']?> <?=$_SESSION['apellidos']?></h2>
+<?php
+    switch($_SESSION['tipo_usu']){
+        case 1:
+            include('admin');
+            break;
+        case 2:
+            include('tutor');
+            break;
+        default:
+            header('controlador/cerrar_sesion.php');
+            break;
+    }

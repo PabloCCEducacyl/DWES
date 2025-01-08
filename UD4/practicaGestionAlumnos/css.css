@@ -75,8 +75,6 @@ legend {
     background-color: var(--color-primario);
     color: white;
     padding: 4px;
-    position: relative;
-    z-index: -1;
 }
 
 .info {
@@ -87,6 +85,7 @@ legend {
     top: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .titulo-login {
@@ -97,6 +96,56 @@ legend {
 }
 
 .cuadrado-guay {
-    box-shadow: 7px 7px black;
-    z-index: 2;
+    padding: 12px;
+    box-shadow: 7px 7px black
+}
+
+.cerrar {
+    position:absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--color-secundario);
+    cursor: pointer;
+}
+
+.tabla-tutores{
+    border-collapse: collapse;
+}
+.tabla-tutores tr {
+    border: 1px solid black;
+    width: 100%;
+}
+.tabla-tutores th {
+    padding: 4px;
+    background-color: var(--color-primario);
+    color: white;
+}
+.tabla-tutores td {
+    padding: 4px;
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+.tabla-proyectos{
+    border-collapse: collapse;
+}
+.tabla-proyectos tr {
+    border: 1px solid black;
+    width: 100%;
+}
+.tabla-proyectos th {
+    padding: 4px;
+    background-color: var(--color-primario);
+    color: white;
+}
+.tabla-proyectos td {
+    padding: 4px;
+    background-color: var(--color-secundario);
+    height: 24px;
+    color: white;
+}
+
+.desc-proyecto {
+    width: 100px;
+    height: 24px !important;
 }

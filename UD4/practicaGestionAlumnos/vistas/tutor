@@ -1,0 +1,25 @@
+<?php
+    include_once('config/conexion.php');
+
+    $sql = "SELECT * FROM proyecto LEFT JOIN alumno ON proyecto.id_alumno = alumno.id_alumno WHERE id_tutor = {$_SESSION['id_tutor']} ";
+    
+    $proyectos = $conexion->query($sql);
+?>
+<table class="tabla-proyectos">
+    <tr>
+        <th>Titulo</th>
+        <th>Alumno</th>
+        <th>Descripcion</th>
+        <th>Año</th>
+    </tr>
+<?php 
+    foreach($proyectos as $proyecto){
+    echo "<tr>";
+    echo "<td>{$proyecto['titulo']}</td>
+          <td>{$proyecto['nombre']}</td>
+          <td class='desc-proyecto'>{$proyecto['descripcion']}</td>
+          <td>{$proyecto['anno']}</td>";
+    echo "<tr>";
+    }
+?>
+</table>

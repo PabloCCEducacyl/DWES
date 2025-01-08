@@ -1,0 +1,37 @@
+<?php
+    include_once('config/conexion.php');
+
+    $sql = "SELECT * FROM tutor";
+    
+    $tutores = $conexion->query($sql);
+?>
+<table class="tabla-tutores">
+    <tr>
+        <th>Correo</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Baja</th>
+        <th>Activado</th>
+    </tr>
+<?php 
+    foreach($tutores as $tutor){
+    echo "<tr>";
+    echo "<td>{$tutor['correo']}</td>
+    <td>{$tutor['nombre']}</td>
+    <td>{$tutor['apellidos']}22</td>";
+    if($tutor['baja'] == 0){
+        $tutor['baja'] = '<input type="checkbox">';
+    }else{
+        $tutor['baja'] = '<input type="checkbox" checked>';
+    }
+    echo "<td>{$tutor['baja']}</td>";
+    if($tutor['activada'] == 0){
+        $tutor['activada'] = '<input type="checkbox">';
+    }else{
+        $tutor['activada'] = '<input type="checkbox" checked>';
+    }
+    echo "<td>{$tutor['activada']}</td>";
+    echo "<tr>";
+    }
+?>
+</table>

@@ -1,40 +1,39 @@
-<h1 class="titulo-login cuadrado-guay">Gestión Proyectos Alumnos</h1>
-    <div class="menus">
-        <h2 id="menu-login" class="menu-activo cuadrado-guay">Iniciar Sesión</h2>
-        <h2 id="menu-registrar" class="cuadrado-guay">Registrar</h2>
-    </div>
-    <section id="form-login">
-        <fieldset class="cuadrado-guay formulario">
-            <legend class="cuadrado-guay">Iniciar Sesión:</legend>
-            <form action="../controlador/login.php" method="POST">
-                <label for="correo">Correo:
-                    <input type="email" name="correo"></label>
-                <label for="contrasena">Contraseña:
-                    <input type="text" name="contrasena"></label>
-                <input type="submit" value="Iniciar Sesión">
-            </form>
-        </fieldset>
-    </section>
-    <section id="form-registro">
-        <fieldset class="cuadrado-guay formulario">
-            <legend class="cuadrado-guay">Registro:</legend>
-            <form action="controlador/registro.php" method="post">
-                <label for="correo">Correo:
-                    <input type="email" name="correo"></label>
-                <label for="tipo_usu">Tipo de Usuario:</label>
-                <label>
-                    <input type="radio" name="tipo_usu" disabled value="1">Alumno
-                </label>
-                <label>
-                    <input type="radio" name="tipo_usu" checked value="2">Tutor
-                </label>
-                <label for="nombre">Nombre:
-                    <input name="nombre" type="text"></label>
-                <label for="apellidos">Apellidos:
-                    <input name="apellidos" type="text"></label>
-                <label>Contraseña:
-                    <input name="password" type="password"></label>
-                <input type="submit" value="Registrar">
-            </form>
-        </fieldset>
-    </section>
+<div class="menus">
+    <h2 id="menu-login" class="menu-activo cuadrado-guay">Iniciar Sesión</h2>
+    <h2 id="menu-registrar" class="cuadrado-guay">Registrar</h2>
+</div>
+<section id="form-login">
+    <fieldset class="cuadrado-guay formulario">
+        <legend class="cuadrado-guay">Iniciar Sesión:</legend>
+        <form action="controlador/login.php" method="POST">
+            <label for="correo">Correo:
+                <input type="email" name="correo"></label>
+            <label for="contrasena">Contraseña:
+                <input type="password" name="contrasena"></label>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </fieldset>
+</section>
+<section id="form-registro">
+    <fieldset class="cuadrado-guay formulario">
+        <legend class="cuadrado-guay">Registro:</legend>
+        <form action="controlador/registro.php" method="post">
+            <label for="correo">Correo:
+                <input type="email" name="correo"></label>
+            <label for="tipo_usu">Tipo de Usuario:</label>
+            <label>
+                <input type="radio" name="tipo_usu" disabled value="1">Alumno
+            </label>
+            <label>
+                <input type="radio" name="tipo_usu" checked value="2">Tutor
+            </label>
+            <label for="nombre">Nombre:
+                <input name="nombre" type="text"></label>
+            <label for="apellidos">Apellidos:
+                <input name="apellidos" type="text"></label>
+            <label>Contraseña:
+                <input name="password" type="password"></label>
+            <input type="submit" value="Registrar">
+        </form>
+    </fieldset>
+</section>
