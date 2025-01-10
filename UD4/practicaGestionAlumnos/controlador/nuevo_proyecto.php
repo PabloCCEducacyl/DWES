@@ -44,8 +44,8 @@
     $insertarProyectoSQL->bindParam(":id_tutor", $id_tutor, PDO::PARAM_INT);
     $resInsertar = $insertarProyectoSQL->execute();
     if($resInsertar){
-        header("Location:../index.php?info='Proyecto insertado correctamente'");
+        header("Location:../index.php?info=Proyecto insertado correctamente");
     } else {
-        header("Location:../index.php?info='Ha habido un error: {$insertarProyectoSQL->errorCode()}'");
+        header("Location:../index.php?info=Ha habido un error: {$insertarProyectoSQL->errorCode()}");
     }
     //(:titulo, :descripccion, :periodo, :curso, :logotipo, :pdf_proyecto, :fecha_presentacion, :nota)");
