@@ -10,16 +10,24 @@
         <th>Titulo</th>
         <th>Alumno</th>
         <th>Descripcion</th>
-        <th>Año</th>
+        <th>Curso</th>
+        <th>Fecha presentación</th>
+        <th>Logotipo</th>
+        <th>PDF</th>
+        <th>Eliminar</th>
     </tr>
 <?php 
     foreach($proyectos as $proyecto){
     echo "<tr>";
     echo "<td>{$proyecto['titulo']}</td>
-          <td>{$proyecto['nombre']}</td>
-          <td class='desc-proyecto'>{$proyecto['descripcion']}</td>
-          <td>{$proyecto['anno']}</td>";
-    echo "<tr>";
+          <td>{$proyecto['nombre']} {$proyecto['apellidos']}</td>
+          <td class='desc-proyecto'><p>{$proyecto['descripcion']}</p></td>
+          <td>{$proyecto['curso']}</td>
+          <td>{$proyecto['fecha_presentacion']}</td>
+          <td><a href='data:image/png;base64,{$proyecto['logotipo']}'><img src='data:image/png;base64,{$proyecto['logotipo']}'></a></td>
+          <td><a href='archivos/{$proyecto['pdf_proyecto']}'>Ver</a></td>
+          <td><a class='btn-form' href='controlador/eliminar_proyecto.php?id_proyecto={$proyecto["id_proyecto"]}'>Eliminar</a></td>";
+    echo "</tr>";
     }
 ?>
 </table>

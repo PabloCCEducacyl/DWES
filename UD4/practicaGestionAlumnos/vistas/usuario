@@ -3,6 +3,8 @@
 }?>
 <h1>Bienvenido</h1>
 <h2><?=$_SESSION['nombre']?> <?=$_SESSION['apellidos']?></h2>
+<div class='cuadrado-guay btn-proyecto' id='nuevoproyecto'>Nuevo Proyecto</div>
+
 <?php
     switch($_SESSION['tipo_usu']){
         case 1:
@@ -14,4 +16,7 @@
         default:
             header('controlador/cerrar_sesion.php');
             break;
+    }
+    if(isset($_GET['form-proyecto'])){
+        include('form-proyecto');
     }

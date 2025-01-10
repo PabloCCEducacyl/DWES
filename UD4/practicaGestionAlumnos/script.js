@@ -36,6 +36,10 @@ $('#cerrarsesion').click(() => {
     window.location.href = 'controlador/cerrar_sesion.php'
 })
 
+$('#nuevoproyecto').click(() => {
+    window.location.href = window.location.href + '?form-proyecto=1'
+})
+
 window.addEventListener("load", () => {
     history.replaceState({}, "", ".")
 });

@@ -20,11 +20,18 @@
     $selectSQL->execute();
     $resSelect = $selectSQL->fetch(PDO::FETCH_OBJ);
 
-    // print_r($resSelect);
-    // echo $resSelect->{'correo'};
+    if($resSelect->{'activada'} == 0){
+        header("Location: ../index.php?info=Usuario no activado");
+        die();
+    }
+    if($resSelect->{'baja'} == 1){
+        header("Location: ../index.php?info=Usuario desactivado");
+        die();
+    }
+
     if($resSelect == ""){
-        // echo 'no hay nada';
         header("Location: ../index.php?info=Usuario o contraseña incorrectas");
+        die();
     }
     
 

@@ -32,7 +32,7 @@
     $apellidos = trim($_POST['apellidos']);
 
     $contrasenahasheada = password_hash($password, PASSWORD_DEFAULT);
-    $insertarTutorSQL = "INSERT INTO `tutor` (`correo`, `nombre`, `apellidos`, `password`, `tipo_usu`, `baja`, `activada`) VALUES (:correo, :nombre, :apellidos, :password, :tipo_usu, FALSE, TRUE)";
+    $insertarTutorSQL = "INSERT INTO `tutor` (`correo`, `nombre`, `apellidos`, `password`, `tipo_usu`, `baja`, `activada`) VALUES (:correo, :nombre, :apellidos, :password, :tipo_usu, FALSE, FALSE)";
     $insertarSQL = $conexion->prepare($insertarTutorSQL);
     $insertarSQL->bindParam(':correo', $correo, PDO::PARAM_STR);
     $insertarSQL->bindParam(':password', $contrasenahasheada, PDO::PARAM_STR);

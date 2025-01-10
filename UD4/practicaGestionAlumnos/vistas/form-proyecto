@@ -1,0 +1,33 @@
+<fieldset class="formulario cuadrado-guay">
+    <legend>Nuevo Proyecto</legend>
+    <form method="post" action="controlador/nuevo_proyecto.php" enctype="multipart/form-data">
+        <label>Titulo:
+            <input type="text" name="titulo" id="titulo"></label>
+        <label>Descripción:
+            <input type="text" name="descripcion" id="descripcion"></label>
+        <label>Curso:
+            <input type="text" name="curso" id="curso"></label>
+        <label>Fecha presentación:
+            <input type="date" name="fecha_presentacion" id="fecha_presentacion"></label>
+        <label>Logotipo:
+            <input type="file" name="logotipo" id="logotipo" accept="image/png, image/jpeg"></label>
+        <label>PDF:
+            <input type="file" name="pdf" id="pdf" accept="application/pdf"></label>
+        <label>Nota:
+            <input type="number" name="nota" id="nota" min="0" max="10"></label>
+        <label>Alumno:
+            <select name="alumno" id="alumno">
+                <?php
+                    include_once('config/conexion.php');
+
+                    $alumnos = $conexion->query("SELECT * FROM alumno");
+
+                    foreach($alumnos as $alumno){
+                        echo "<option value='{$alumno['id_alumno']}'>{$alumno['id_alumno']} - {$alumno['nombre']} {$alumno['apellidos']}</option>";
+                    }
+                ?>
+            </select></label>
+        <input type="hidden" name="id_tutor" value="<?=$_SESSION['id_tutor']?>">
+        <input type="submit" value="Enviar">
+    </form>
+</fieldset>

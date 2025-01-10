@@ -18,20 +18,31 @@
     echo "<tr>";
     echo "<td>{$tutor['correo']}</td>
     <td>{$tutor['nombre']}</td>
-    <td>{$tutor['apellidos']}22</td>";
+    <td>{$tutor['apellidos']}</td>";
     if($tutor['baja'] == 0){
-        $tutor['baja'] = '<input type="checkbox">';
+        $tutor['baja'] = "<input type='checkbox' disabled><a class='btn-form' href='controlador/baja_tutor.php?id_tutor={$tutor["id_tutor"]}&baja=1'>Dar de baja</a>";
     }else{
-        $tutor['baja'] = '<input type="checkbox" checked>';
+        $tutor['baja'] = "<input type='checkbox' disabled checked><a class='btn-form' href='controlador/baja_tutor.php?id_tutor={$tutor["id_tutor"]}&baja=0'>Dar de alta</a>"; ;
     }
     echo "<td>{$tutor['baja']}</td>";
     if($tutor['activada'] == 0){
-        $tutor['activada'] = '<input type="checkbox">';
+        $tutor['activada'] = "<input disabled type='checkbox'><a class='btn-form' href='controlador/activar_tutor.php?id_tutor={$tutor["id_tutor"]}'>Activar</a>";
     }else{
-        $tutor['activada'] = '<input type="checkbox" checked>';
+        $tutor['activada'] = "<input type='checkbox' disabled checked>";
     }
     echo "<td>{$tutor['activada']}</td>";
     echo "<tr>";
     }
 ?>
+</table>
+<?php
+
+    $sql = "SELECT * FROM proyecto";
+    
+    $proyectos = $conexion->query($sql);
+?>
+
+
+
+
 </table>
