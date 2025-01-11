@@ -3,8 +3,9 @@
         private string $nombre;
         private string $apellidos;
         private float $sueldo;
+        private array $telefonos;
 
-        public function __construct(string $nombre, string $apellidos, float $sueldo){
+        public function __construct(string $nombre, string $apellidos, float $sueldo = 1000, ){
             $this->setNombre($nombre);
             $this->setApellidos($apellidos);
             $this->setSueldo($sueldo);
@@ -20,15 +21,29 @@
         public function getApellidos(): string{
             return $this->apellidos;
         }
-        public function setApellidos($apellidos) {
+        public function setApellidos(string $apellidos) {
             $this->apellidos = $apellidos;
         }
 
         public function getSueldo(): float{
             return $this->sueldo;
         }
-        public function setSueldo($sueldo) {
+        public function setSueldo(float $sueldo) {
             $this->sueldo = $sueldo;
+        }
+
+        public function anadirTelefono(int $telefono){
+            $this->telefonos[] = $telefono;
+        }
+        public function listarTelefonos(){
+            $telefonos = "";
+            foreach($this->telefonos as $telefono){
+                $telefonos .= $telefono . " ";
+            }
+            return $telefonos;
+        }
+        public function vaciarTelefonos(){
+            $this->telefonos = [];
         }
 
         public function getDatosCompleto(){
