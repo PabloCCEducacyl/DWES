@@ -3,7 +3,7 @@
 
     $productos = [
         new Producto(1, "Gorbino's Quest", "2.99"),
-        new Producto(2, ""),
+        new Producto(2, "G-Force", 5.99),
         new Producto(3, ""),
     ]
 
