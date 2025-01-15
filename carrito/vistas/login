@@ -1,0 +1,7 @@
+<form class="login-form" action="controlador/login.php">
+    <label for="email">Email:
+        <input type="email"></label>
+    <label for="password">Contraseña:
+        <input type="password">
+    </label>
+</form>

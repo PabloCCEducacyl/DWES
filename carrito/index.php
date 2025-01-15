@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e</title>
+    <title>e_e_e_e</title>
+    <link rel="stylesheet" href="css/css.css">
     <link rel="shortcut icon" href="imagenes/importante.gif" type="image/x-icon">
 </head>
 <body>
-    
+    <?php
+    session_start();
+    $root = $_SERVER['DOCUMENT_ROOT']."\DWES\carrito\\";
+    include_once("vistas/header");
+    if(isset($_GET["login"])){
+        include_once("vistas/login");
+    } else if(isset($_GET["carrito"])) {
+        include_once("vistas/carrito");
+    } else {
+        include_once("vistas/productos");
+    }
+        ?>
+
 </body>
 </html>

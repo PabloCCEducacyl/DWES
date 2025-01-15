@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        <h1><a href="?">Tienda</a></h1>
+        <div>
+            <?php
+                if(isset($_SESSION['email'])){
+                    echo "<a href='?carrito'>Carrito</a>";
+                } else {
+                    echo "<a href='?login'>Iniciar Sesión</a>";
+                }
+            ?>
+        </div>
+    </nav>
+</header>

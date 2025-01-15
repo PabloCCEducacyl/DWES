@@ -4,8 +4,9 @@
         private string $nombre;
         private float $precio;
 
-        public function __construct($nombre, $precio)
+        public function __construct($id, $nombre, $precio)
         {
+            $this->setID($id);
             $this->setNombre($nombre);
             $this->setPrecio($precio);
         }

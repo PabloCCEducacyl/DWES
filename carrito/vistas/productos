@@ -1,0 +1,17 @@
+<?php
+    // include_once($root."controlador/productos.php");
+    include_once($root."controlador\productos.php");
+    foreach($productos as $producto) {
+        $precio = floatval($producto->getPrecio());
+        echo "
+            <div class='producto'>
+                <div class='imagen-producto'>
+                    <img src='imagenes/producto/{$producto->getId()}.jpg' alt='Imagen Producto'></div>
+                <div class='desc-producto'>
+                    <h2>{$producto->getNombre()}</h2>
+                    <h3>{$precio} €</h3>
+                    <button>Añadir a carrito</button>
+                </div>
+            </div>
+        ";
+    }

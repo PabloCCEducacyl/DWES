@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+header {
+    width: 100%;
+}
+
+header nav{
+    margin: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 400px;
+    height: 200px;
+    padding: 8px;
+    margin: 8px;
+    outline: 2px solid black;
+    border-radius: 2px;
+}
+
+.producto .imagen-producto {
+    height: 200px;
+}
+.producto .imagen-producto > img {
+    height: 100%;
+}
+
+.producto .desc-producto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.producto .desc-producto h2{
+    text-align: end;
+}
