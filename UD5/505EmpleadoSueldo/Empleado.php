@@ -52,7 +52,6 @@
             Empleado::$sueldoTope = $sueldo;
         }
 
-
         public function getDatosCompleto(){
             return $this->nombre . " " . $this->apellidos . ", sueldo: " . $this->sueldo;
         }
