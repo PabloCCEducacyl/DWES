@@ -23,5 +23,4 @@
         echo "<html><script> window.location.replace('errorinicio.php') </script></html>";
     }
 
-
-?><s
+?>

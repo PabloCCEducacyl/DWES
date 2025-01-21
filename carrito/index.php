@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e_e_e_e</title>
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shortcut icon" href="imagenes/importante.gif" type="image/x-icon">
 </head>
 <body>
@@ -21,5 +22,6 @@
     }
         ?>
 
+    <script src="js/js.js"></script>
 </body>
 </html>

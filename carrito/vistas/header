@@ -1,14 +1,16 @@
-<header>
-    <nav>
-        <h1><a href="?">Tienda</a></h1>
-        <div>
-            <?php
-                if(isset($_SESSION['email'])){
-                    echo "<a href='?carrito'>Carrito</a>";
-                } else {
-                    echo "<a href='?login'>Iniciar Sesión</a>";
-                }
-            ?>
-        </div>
-    </nav>
-</header>
+<div class="container">
+    <header class="py-3 mb-4 border-bottom">
+        <nav class="d-flex flex-wrap flew align-items-center justify-content-between">
+            <h1><a href="?">Tienda</a></h1>
+            <div>
+                <?php
+                    if(isset($_SESSION['email'])){
+                        echo "<a href='?carrito'>Carrito</a>";
+                    } else {
+                        echo "<a href='?login'>Iniciar Sesión</a>";
+                    }
+                ?>
+            </div>
+        </nav>
+    </header>
+</div>
