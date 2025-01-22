@@ -1,0 +1,19 @@
+{
+    "name": "pablo.camcua/cool-ass-graphs",
+    "description": "a",
+    "require-dev": {
+        "ramsey/uuid": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "PabloCamcua\\CoolAssGraphs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pablo Campuzano Cuadrado",
+            "email": "pablo.camcua@educa.jcyl.es"
+        }
+    ],
+    "require": {}
+}

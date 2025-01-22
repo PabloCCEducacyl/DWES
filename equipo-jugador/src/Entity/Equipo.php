@@ -1,7 +1,5 @@
 <?php
 
-
-
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,150 +20,82 @@ class Equipo
     private $idEquipo;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(name="nombre", type="string", length=255, nullable=false)
+     * @ORM\Column(name="nombre", type="string", length=100, nullable=true)
      */
     private $nombre;
 
     /**
-     * @var int
+     * @var int|null
      *
-     * @ORM\Column(name="socios", type="integer", nullable=false)
+     * @ORM\Column(name="socios", type="integer", nullable=true)
      */
     private $socios;
 
     /**
-     * @var int
+     * @var int|null
      *
-     * @ORM\Column(name="fundacion", type="integer", nullable=false)
+     * @ORM\Column(name="fundacion", type="integer", nullable=true)
      */
     private $fundacion;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(name="ciudad", type="string", length=255, nullable=false)
+     * @ORM\Column(name="ciudad", type="string", length=100, nullable=true)
      */
     private $ciudad;
 
+    // Getters and Setters
 
-
-    /**
-     * Get the value of idEquipo
-     *
-     * @return  int
-     */ 
-    public function getIdEquipo()
+    public function getId(): ?int
     {
         return $this->idEquipo;
     }
 
-    /**
-     * Set the value of idEquipo
-     *
-     * @param  int  $idEquipo
-     *
-     * @return  self
-     */ 
-
-    public function setIdEquipo(int $idEquipo)
-    {
-        $this->idEquipo = $idEquipo;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of nombre
-     *
-     * @return  string
-     */ 
-    public function getNombre()
+    public function getNombre(): ?string
     {
         return $this->nombre;
     }
 
-    /**
-     * Set the value of nombre
-     *
-     * @param  string  $nombre
-     *
-     * @return  self
-     */ 
-    public function setNombre(string $nombre)
+    public function setNombre(?string $nombre): self
     {
         $this->nombre = $nombre;
 
         return $this;
     }
 
-    /**
-     * Get the value of socios
-     *
-     * @return  int
-     */ 
-    public function getSocios()
+    public function getSocios(): ?int
     {
         return $this->socios;
     }
 
-    /**
-     * Set the value of socios
-     *
-     * @param  int  $socios
-     *
-     * @return  self
-     */ 
-    public function setSocios(int $socios)
+    public function setSocios(?int $socios): self
     {
         $this->socios = $socios;
 
         return $this;
     }
 
-    /**
-     * Get the value of fundacion
-     *
-     * @return  int
-     */ 
-    public function getFundacion()
+    public function getFundacion(): ?int
     {
         return $this->fundacion;
     }
 
-    /**
-     * Set the value of fundacion
-     *
-     * @param  int  $fundacion
-     *
-     * @return  self
-     */ 
-    public function setFundacion(int $fundacion)
+    public function setFundacion(?int $fundacion): self
     {
         $this->fundacion = $fundacion;
 
         return $this;
     }
 
-    /**
-     * Get the value of ciudad
-     *
-     * @return  string
-     */ 
-    public function getCiudad()
+    public function getCiudad(): ?string
     {
         return $this->ciudad;
     }
 
-    /**
-     * Set the value of ciudad
-     *
-     * @param  string  $ciudad
-     *
-     * @return  self
-     */ 
-    public function setCiudad(string $ciudad)
+    public function setCiudad(?string $ciudad): self
     {
         $this->ciudad = $ciudad;
 

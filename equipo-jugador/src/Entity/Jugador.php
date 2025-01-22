@@ -1,7 +1,5 @@
 <?php
 
-
-
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,23 +20,23 @@ class Jugador
     private $idJugador;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(name="nombre", type="string", length=255, nullable=false)
+     * @ORM\Column(name="nombre", type="string", length=100, nullable=true)
      */
     private $nombre;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(name="apellidos", type="string", length=255, nullable=false)
+     * @ORM\Column(name="apellidos", type="string", length=100, nullable=true)
      */
     private $apellidos;
 
     /**
-     * @var int
+     * @var int|null
      *
-     * @ORM\Column(name="edad", type="integer", nullable=false)
+     * @ORM\Column(name="edad", type="smallint", nullable=true)
      */
     private $edad;
 
@@ -52,122 +50,55 @@ class Jugador
      */
     private $equipo;
 
+    // Getters and Setters
 
-
-    /**
-     * Get the value of idJugador
-     *
-     * @return  int
-     */ 
-    public function getIdJugador()
+    public function getIdJugador(): ?int
     {
         return $this->idJugador;
     }
 
-    /**
-     * Set the value of idJugador
-     *
-     * @param  int  $idJugador
-     *
-     * @return  self
-     */ 
-    public function setIdJugador(int $idJugador)
-    {
-        $this->idJugador = $idJugador;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of nombre
-     *
-     * @return  string
-     */ 
-    public function getNombre()
+    public function getNombre(): ?string
     {
         return $this->nombre;
     }
 
-    /**
-     * Set the value of nombre
-     *
-     * @param  string  $nombre
-     *
-     * @return  self
-     */ 
-    public function setNombre(string $nombre)
+    public function setNombre(?string $nombre): self
     {
         $this->nombre = $nombre;
 
         return $this;
     }
 
-    /**
-     * Get the value of apellidos
-     *
-     * @return  string
-     */ 
-    public function getApellidos()
+    public function getApellidos(): ?string
     {
         return $this->apellidos;
     }
 
-    /**
-     * Set the value of apellidos
-     *
-     * @param  string  $apellidos
-     *
-     * @return  self
-     */ 
-    public function setApellidos(string $apellidos)
+    public function setApellidos(?string $apellidos): self
     {
         $this->apellidos = $apellidos;
 
         return $this;
     }
 
-    /**
-     * Get the value of edad
-     *
-     * @return  int
-     */ 
-    public function getEdad()
+    public function getEdad(): ?int
     {
         return $this->edad;
     }
 
-    /**
-     * Set the value of edad
-     *
-     * @param  int  $edad
-     *
-     * @return  self
-     */ 
-    public function setEdad(int $edad)
+    public function setEdad(?int $edad): self
     {
         $this->edad = $edad;
 
         return $this;
     }
 
-    /**
-     * Get the value of equipo
-     *
-     * @return  \Equipo
-     */ 
-    public function getEquipo()
+    public function getEquipo(): ?Equipo
     {
         return $this->equipo;
     }
 
-    /**
-     * Set the value of equipo
-     *
-     * @param  \Equipo  $equipo
-     *
-     * @return  self
-     */ 
-    public function setEquipo(\Equipo $equipo)
+    public function setEquipo(?Equipo $equipo): self
     {
         $this->equipo = $equipo;
 
