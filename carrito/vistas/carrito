@@ -1,0 +1,12 @@
+<?php
+    if(!isset($_SESSION['carrito'])){
+        echo "<h3>Aún no has añadido nada al carrito</h3>";
+        die;
+    }
+    print_r($_SESSION['carrito']);
+    $carrito = $_SESSION['carrito'];
+    foreach($carrito as $producto){
+        echo "<p>";
+        print_r($producto);
+        echo "</p>";
+    }

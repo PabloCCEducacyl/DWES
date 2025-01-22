@@ -5,7 +5,7 @@
         new Producto(1, "Gorbino's Quest", 2.99),
         new Producto(2, "G-Force", 5.99),
         new Producto(3, "Metin 2", 1.99),
-        new Producto(4, "Honkai: Star Rail", 9.99),
+        new Producto(4, "Honkai: Star Rail", 19.99),
         new Producto(5, "Donkey Kong Country", 5.99),
         new Producto(6, "Stardew Valley", 4.00),
         new Producto(7, "Mario Kart Wii", 3.99),

@@ -12,10 +12,14 @@
     <?php
     session_start();
     $root = __DIR__."/";
+    if(isset($_GET['carrito'])){
+        echo "<script>funcionabrir</script>";
+    }
+    print_r($_COOKIE);
     include_once("vistas/header");
-    if(isset($_GET["login"])){
-        include_once("vistas/login");
-    } else if(isset($_GET["carrito"])) {
+    /*if(isset($_GET["login"])){
+        //include_once("vistas/login");
+    } else*/ if(isset($_GET["carrito"])) {
         include_once("vistas/carrito");
     } else {
         include_once("vistas/productos");

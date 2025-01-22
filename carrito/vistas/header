@@ -1,14 +1,14 @@
 <div class="container">
     <header class="py-3 mb-4 border-bottom">
-        <nav class="d-flex flex-wrap flew align-items-center justify-content-between">
-            <h1><a href="?">Tienda</a></h1>
+        <nav class="header d-flex flex-wrap flew align-items-center justify-content-md-between justify-content-around">
+            <a href="?" class='btn'><h1>Tienda</h1></a>
             <div>
                 <?php
-                    if(isset($_SESSION['email'])){
-                        echo "<a href='?carrito'>Carrito</a>";
-                    } else {
+                    //if(isset($_SESSION['email'])){
+                        echo "<a class='btn' href='?carrito'>Carrito</a>";
+                    /*} else {
                         echo "<a href='?login'>Iniciar Sesión</a>";
-                    }
+                    }*/
                 ?>
             </div>
         </nav>
