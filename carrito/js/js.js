@@ -4,11 +4,13 @@ function annadirCarrito(e, cantidad = 1){
     console.log(localStorage.getItem('carrito'))
 
     let producto, carrito;
-
+    
+    console.log(idProducto)
+    console.log(cantidad)
     switch(estadoCarrito){
         case 0: //crear carrito
-            producto = `{[{id:${idProducto}, cantidad:${cantidad}}]}`
-            localStorage.setItem('carrito', JSON.parse(producto))
+            producto = {id: idProducto, cantidad: cantidad}
+            localStorage.setItem('carrito', JSON.stringify(producto))
             break
         case 1: //añadir producto
             producto = `{id:${idProducto}, cantidad:${cantidad}}`

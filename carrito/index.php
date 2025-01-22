@@ -11,7 +11,7 @@
 <body>
     <?php
     session_start();
-    $root = $_SERVER['DOCUMENT_ROOT']."\DWES\carrito\\";
+    $root = __DIR__."/";
     include_once("vistas/header");
     if(isset($_GET["login"])){
         include_once("vistas/login");
