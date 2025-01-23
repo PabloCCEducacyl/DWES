@@ -1,0 +1,27 @@
+.quitos-header{
+    height: 70px;
+}
+.carrito{
+    height: 80px;
+    width: 80px;
+}
+.main-padding{
+    margin-top:50px;
+    padding-top: 120px;
+}
+
+main {
+    height: 100vh;
+}
+html {
+    height: 100%;
+}
+
+.foto-mono {
+    max-width: 7em;
+}
+
+.form-perfil{
+    display: inline-block;
+}
+

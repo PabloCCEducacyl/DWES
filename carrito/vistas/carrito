@@ -1,12 +1,38 @@
 <?php
-    if(!isset($_SESSION['carrito'])){
+    if(!isset($_SESSION['carrito']) || empty($_SESSION['carrito']) || $_SESSION['carrito'] == 'a:0:{}'){
         echo "<h3>Aún no has añadido nada al carrito</h3>";
         die;
     }
-    print_r($_SESSION['carrito']);
-    $carrito = $_SESSION['carrito'];
+    $carrito = unserialize($_SESSION['carrito']);
+    ?>
+    <div class="row container">
+    <h2>Carrito</h2>
+    <?php
+    $precioTotal = 0;
     foreach($carrito as $producto){
-        echo "<p>";
-        print_r($producto);
-        echo "</p>";
+        $precioTotal += floatval($producto['precio'] * $producto['cantidad']);
     }
+    echo "<h4 class='text-secondary'>Precio total: {$precioTotal} €</h4>";
+    foreach($carrito as $producto){
+        //print_r($producto);
+        echo "<div class='col-md-3 col-12 producto'>
+            <div class='card align-items-start flex-fill col d-flex flex-column justify-content-between align-items-center '>
+                <img class='card-img-top' src='imagenes/producto/{$producto['id']}.jpg' alt='Imagen Producto'>
+                <div class='card-body mt-2'>
+                    <h4 class='text-uppercase text-truncate'>{$producto['nombre']}</h4>
+                    ";
+                    $precioTotal = floatval($producto['precio'] * $producto['cantidad']);
+                    echo "
+                    <h5 class='text-secondary'>{$precioTotal} €</h5>
+                    <form class='d-flex justify-content-around' action='controlador/carrito.php' method='get'>
+                        <input class='w-50' type='number' name='cantidad' value='{$producto['cantidad']}' min='1'>
+                        <input type='hidden' name='operacion' value='modificar'>
+                        <input type='hidden' name='id' value='{$producto['id']}'>
+                        <input type='submit' class='btn btn-primary' value='Actuzalizar'>
+                    </form>
+                    <a href='controlador/carrito.php?operacion=eliminar&id={$producto['id']}' type='button' class='btn btn-danger'>Eliminar</a>
+                </div>
+            </div>
+        </div>";
+    }?>
+    </div>
