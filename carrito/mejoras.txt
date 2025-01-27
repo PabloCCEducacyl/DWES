@@ -1,0 +1,4 @@
+-carrito serializado
+-lo guarda en cookies pero no hace nada con eso
+-aumenta la cantidad al añadir mas del mismo producto
+-elimina un producto por completo si se le da a eliminar o su cantidad llega a 0 o menos
