@@ -3,11 +3,11 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Equipo
- *
- * @ORM\Table(name="equipo")
- * @ORM\Entity
- */
+* Equipo
+*
+* @ORM\Table(name="equipo")
+* @ORM\Entity(repositoryClass="EquipoRepository")
+*/
 class Equipo
 {
     /**

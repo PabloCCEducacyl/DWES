@@ -11,7 +11,7 @@ $dbParams = array(
     'driver'   => 'pdo_mysql',
     'user'     => 'root',
     'password' => '',
-    'dbname'   => 'doctrine',
+    'dbname'   => 'equipo_jugador',
 	'host' => 'localhost',
 );
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);
