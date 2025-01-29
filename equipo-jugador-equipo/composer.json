@@ -1,0 +1,22 @@
+{
+    "name": "pablo.camcua/equipo-jugador",
+    "description": "Jugadores que pertenecen a equipos",
+    "autoload": {
+        "psr-4": {
+            "PabloCamcua\\EquipoJugador\\": "src/",
+            "PabloCamcua\\EquipoJugador\\Entity\\": "src/Entity/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pablo Campuzano Cuadrado",
+            "email": "pablo.camcua@educa.jcyl.es"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.20",
+        "doctrine/cache": "^1.1",
+        "doctrine/annotations": "^2.0"
+    }
+}
