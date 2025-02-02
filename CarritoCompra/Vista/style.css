@@ -1,0 +1,290 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: #dcdce4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2a2a3d;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #4a4a6a;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 300;
+    color: #9ca0b0;
+}
+
+
+.catalogo {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #2e2e40;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 300px;
+    border-bottom: 2px solid #4a4a6a;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+
+.product-info p {
+    font-size: 1rem;
+    margin: 0;
+    color: #a8a8c1;
+}
+
+form {
+    margin: 15px 0;
+}
+
+form input[type="submit"] {
+    background-color: #4a4a6a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #63638c;
+}
+
+.producto {
+    width: 85%;
+    margin-left: 300px;
+    border: 2px solid #9b59b6;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #2e2e40;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.producto img {
+    height: auto;
+    margin-right: 20px;
+    height: 200px;
+}
+
+.producto .info {
+    flex: 1;
+    color: #ffffff;
+}
+
+.producto .info p {
+    margin: 5px 0;
+}
+
+.producto .info strong {
+    font-size: 1.1rem;
+}
+
+
+body {
+    background-color: #1e1e2f;
+}
+
+
+.total {
+    background-color: #3b3a60;
+    color: #dcdce4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+footer {
+    background-color: #2a2a3d;
+    color: #9ca0b0;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 3px solid #4a4a6a;
+}
+
+footer a {
+    color: #a8a8c1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+
+input[type="submit"].borrar-btn {
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+input[type="submit"].borrar-btn:hover {
+    background-color: #8e44ad;
+}
+
+input[type="submit"].vaciar-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+input[type="submit"].vaciar-btn:hover {
+    background-color: #2980b9;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.actions form {
+    width: 48%;
+    text-align: center;
+}
+
+.actions a {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    color: white;
+    background-color: #2ecc71;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.actions a:hover {
+    background-color: #27ae60;
+}
+
+
+.exito {
+    text-align: center;
+    background-color: #2ecc71;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.icono {
+    margin: 20px 0;
+}
+
+.icono svg {
+height: 300px;
+width: 100%;
+    fill: white;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.exito p {
+    font-size: 1.2rem;
+}
+
+
+.error {
+    background-color: #e74c3c;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.error h2 {
+    font-size: 2rem;
+}
+
+.error p {
+    font-size: 1.2rem;
+}
+
+
+.boton-volver {
+    margin-left: 40%;
+    background-color: #407ce4;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.boton-comprar{
+    margin-right: 50%;
+    width: 100px;
+}
+
+.boton-volver:hover {
+    background-color: #27ae60;
+}
