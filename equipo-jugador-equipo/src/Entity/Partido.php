@@ -43,7 +43,7 @@ class Partido
     /**
      * @var \equipoLocal
      *
-     * @ORM\OneToMany(targetEntity="Equipo")
+     * @ORM\ManyToOne(targetEntity="Equipo")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_equipo_local", referencedColumnName="id_equipo")
      * })
@@ -53,7 +53,7 @@ class Partido
     /**
      * @var \equipoVisitante
      *
-     * @ORM\OneToMany(targetEntity="Equipo")
+     * @ORM\ManyToOne(targetEntity="Equipo")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_equipo_visitante", referencedColumnName="id_equipo")
      * })
