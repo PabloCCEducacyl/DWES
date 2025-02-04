@@ -1,6 +1,6 @@
 {
-    "name": "pablo.camcua/equipo-jugador",
-    "description": "Jugadores que pertenecen a equipos",
+    "name": "pablo.camcua/equipo-jugador-partido",
+    "description": "Equipos con jugadores y partidos",
     "autoload": {
         "psr-4": {
             "PabloCamcua\\EquipoJugador\\": "src/",
