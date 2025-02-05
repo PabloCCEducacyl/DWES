@@ -48,7 +48,7 @@ class Partido
      *   @ORM\JoinColumn(name="id_equipo_local", referencedColumnName="id_equipo")
      * })
      */
-    private $EquipoLocal;
+    private $equipoLocal;
 
     /**
      * @var \equipoVisitante
@@ -58,7 +58,7 @@ class Partido
      *   @ORM\JoinColumn(name="id_equipo_visitante", referencedColumnName="id_equipo")
      * })
      */
-    private $EquipoVisitante;
+    private $equipoVisitante;
 
     
 
@@ -165,7 +165,7 @@ class Partido
      */ 
     public function getEquipoLocal()
     {
-        return $this->EquipoLocal;
+        return $this->equipoLocal;
     }
 
     /**
@@ -175,9 +175,9 @@ class Partido
      *
      * @return  self
      */ 
-    public function setEquipoLocal(\Equipo $EquipoLocal)
+    public function setEquipoLocal(\Equipo $equipoLocal)
     {
-        $this->EquipoLocal = $EquipoLocal;
+        $this->equipoLocal = $equipoLocal;
 
         return $this;
     }
@@ -189,7 +189,7 @@ class Partido
      */ 
     public function getEquipoVisitante()
     {
-        return $this->EquipoVisitante;
+        return $this->equipoVisitante;
     }
 
     /**
@@ -199,9 +199,9 @@ class Partido
      *
      * @return  self
      */ 
-    public function setEquipoVisitante(\Equipo $EquipoVisitante)
+    public function setEquipoVisitante(\Equipo $equipoVisitante)
     {
-        $this->EquipoVisitante = $EquipoVisitante;
+        $this->equipoVisitante = $equipoVisitante;
 
         return $this;
     }

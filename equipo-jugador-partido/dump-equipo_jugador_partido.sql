@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `equipo`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `equipo` (
   `id_equipo` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) NOT NULL,
-  `socios` int(11) NOT NULL,
-  `fundacion` int(11) NOT NULL,
-  `ciudad` varchar(255) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `socios` int(11) DEFAULT NULL,
+  `fundacion` int(11) DEFAULT NULL,
+  `ciudad` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_equipo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +38,7 @@ CREATE TABLE `equipo` (
 
 LOCK TABLES `equipo` WRITE;
 /*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (1,'Real madri',70000,1,'madrid'),(2,'barselona',33,2,'barcelona'),(3,'metin2',2147483647,3,'mitin'),(4,'albion',4334,4,'albion'),(5,'metin 3',3000,1,'berlin');
+INSERT INTO `equipo` VALUES (1,'Real madri',70000,1,'madrid'),(2,'barselona',33,2,'barcelona'),(3,'palencia fc',2147483647,3,'palencia'),(4,'albion',4334,4,'albion'),(5,'berlin fc',3000,1,'berlin');
 /*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,13 +51,13 @@ DROP TABLE IF EXISTS `jugador`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jugador` (
   `id_jugador` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) NOT NULL,
-  `apellidos` varchar(255) NOT NULL,
-  `edad` int(11) NOT NULL,
-  `equipo` int(11) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `apellidos` varchar(100) DEFAULT NULL,
+  `edad` smallint(6) DEFAULT NULL,
+  `equipo` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_jugador`),
   KEY `jugador_equipo_FK` (`equipo`),
-  CONSTRAINT `jugador_equipo_FK` FOREIGN KEY (`equipo`) REFERENCES `equipo` (`id_equipo`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `FK_527D6F18C49C530B` FOREIGN KEY (`equipo`) REFERENCES `equipo` (`id_equipo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -80,17 +80,17 @@ DROP TABLE IF EXISTS `partido`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `partido` (
   `id_partido` int(11) NOT NULL AUTO_INCREMENT,
-  `id_equipo_local` int(11) NOT NULL,
-  `id_equipo_visitante` int(11) NOT NULL,
+  `id_equipo_local` int(11) DEFAULT NULL,
+  `id_equipo_visitante` int(11) DEFAULT NULL,
   `goles_local` int(11) DEFAULT NULL,
   `goles_visitante` int(11) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   PRIMARY KEY (`id_partido`),
   KEY `partido_equipo_FK` (`id_equipo_local`),
   KEY `partido_equipo_FK_1` (`id_equipo_visitante`),
-  CONSTRAINT `partido_equipo_FK` FOREIGN KEY (`id_equipo_local`) REFERENCES `equipo` (`id_equipo`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `partido_equipo_FK_1` FOREIGN KEY (`id_equipo_visitante`) REFERENCES `equipo` (`id_equipo`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  CONSTRAINT `FK_4E79750B566B345E` FOREIGN KEY (`id_equipo_local`) REFERENCES `equipo` (`id_equipo`),
+  CONSTRAINT `FK_4E79750BBE31F08D` FOREIGN KEY (`id_equipo_visitante`) REFERENCES `equipo` (`id_equipo`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `partido` (
 
 LOCK TABLES `partido` WRITE;
 /*!40000 ALTER TABLE `partido` DISABLE KEYS */;
-INSERT INTO `partido` VALUES (1,2,3,4,0,NULL);
+INSERT INTO `partido` VALUES (3,1,2,2,3,'2023-01-05'),(4,1,3,4,1,'2023-01-12'),(5,1,4,3,0,'2023-01-19'),(6,1,5,1,2,'2023-01-26'),(9,2,1,2,1,'2023-02-09'),(10,2,3,3,3,'2023-02-16'),(11,2,4,5,0,'2023-02-23'),(12,2,5,1,2,'2023-03-02'),(14,3,1,0,2,'2023-03-16'),(15,3,2,3,5,'2023-03-23'),(16,3,4,2,1,'2023-03-30'),(17,3,5,4,3,'2023-04-06'),(19,3,5,1,0,'2023-04-13'),(20,4,1,2,4,'2023-04-20'),(21,4,2,3,2,'2023-04-27'),(22,4,2,3,2,'2023-04-27'),(23,4,3,1,5,'2023-05-04'),(24,4,5,0,1,'2023-05-11'),(26,5,1,5,0,'2023-05-25'),(27,5,2,1,2,'2023-06-01'),(28,5,3,3,4,'2023-06-08'),(29,5,4,2,1,'2023-06-15');
 /*!40000 ALTER TABLE `partido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-29 14:01:57
+-- Dump completed on 2025-02-03 23:40:47

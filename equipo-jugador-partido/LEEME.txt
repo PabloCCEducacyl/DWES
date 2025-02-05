@@ -1,0 +1,3 @@
+Para probar el programa hay que importar la base de datos desde el dump dump-equipo_jugador_partido.sql.
+
+Las prueba están en el archivo pruebas.php. Salen un par de cosas y hay un formulario al final en el que puedes poner el nombre de un equipo y te salen los jugadores y los partidos en los que participa ese equipo. Si esta de visitante en algún partido sale de segundo equipo.

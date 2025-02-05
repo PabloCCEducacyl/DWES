@@ -14,7 +14,7 @@ class EquipoRepository extends \Doctrine\ORM\EntityRepository
         $this->entityManager = $entityManager;
     }
 
-    public function getLista($nombre_equipo){
+    public function getListaJugadores($nombre_equipo){
         $consulta = $this->entityManager->createQuery(
             "SELECT j FROM jugador j JOIN j.equipo e WHERE e.nombre = :nombre_equipo");
         $consulta->setParameter("nombre_equipo", $nombre_equipo);
@@ -23,6 +23,17 @@ class EquipoRepository extends \Doctrine\ORM\EntityRepository
 
         if(!empty($jugadores)){
             return $jugadores;
+        } else {
+            return -1;
+        }
+    }
+
+    public function getLista(){
+        $consulta = $this->entityManager->createQuery("SELECT e FROM equipo e");
+        $equipos = $consulta->getResult();
+
+        if(!empty($equipos)){
+            return $equipos;
         } else {
             return -1;
         }
