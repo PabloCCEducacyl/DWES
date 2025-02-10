@@ -13,12 +13,8 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/pelicula', name: 'pelicula')]
 final class PeliculaController extends AbstractController
 {
-<<<<<<< HEAD
 
     #[Route('/', name: 'index_pelicula', methods: ['GET'])]
-=======
-    #[Route('/', name: 'index_pelicula')]
->>>>>>> refs/remotes/origin/main
     public function index(): Response
     {
         return $this->json("Esta es la ruta index de pelicula");
@@ -31,22 +27,14 @@ final class PeliculaController extends AbstractController
         $peliculasJSON = [];
         foreach ($peliculas as $pelicula) {
             $peliculasJSON[] = [
-<<<<<<< HEAD
                 "Titulo" => $pelicula->getTitulo(),
                 "Descripcion" => $pelicula->getDescripccion(),
                 "Año" => $pelicula->getAnyo(),
                 "Duración" => $pelicula->getDuracion()
-=======
-            'titulo' => $pelicula->getTitulo(),
-            'descripcion' => $pelicula->getDescripccion(),
-            'año' => $pelicula->getAnyo(),
-            'duracion' => $pelicula->getDuracion()
->>>>>>> refs/remotes/origin/main
             ];
         }
         return $this->json($peliculasJSON);
     }
-<<<<<<< HEAD
     #[Route('/{id}', name: 'get_pelicula', methods: ['GET'])]
     public function peliculaVer(EntityManagerInterface $emi, int $id): Response
     {
@@ -57,26 +45,12 @@ final class PeliculaController extends AbstractController
                 "Descripcion" => $pelicula->getDescripccion(),
                 "Año" => $pelicula->getAnyo(),
                 "Duración" => $pelicula->getDuracion()
-=======
-
-    #[Route('/{id}', name: 'ver_pelicula', methods: ['GET'])]
-    public function peliculaVer(EntityManagerInterface $emi, int $id): Response
-    {
-        $pelicula = $emi->getRepository(Pelicula::class)->find($id);
-        if ($pelicula) {
-            $peliculasJSON = [
-                'titulo' => $pelicula->getTitulo(),
-                'descripcion' => $pelicula->getDescripccion(),
-                'año' => $pelicula->getAnyo(),
-                'duracion' => $pelicula->getDuracion()
->>>>>>> refs/remotes/origin/main
             ];
         } else {
             $peliculasJSON = "No encontrado";
         }
         return $this->json($peliculasJSON);
     }
-<<<<<<< HEAD
     #[Route('/', name: 'registrar_pelicula', methods: ['PUT'])]
     public function peliculaRegistrar(EntityManagerInterface $emi, Request $request): Response
     {
@@ -116,6 +90,3 @@ final class PeliculaController extends AbstractController
         return $this->json($respuesta);
     }
 }
-=======
-}
->>>>>>> refs/remotes/origin/main

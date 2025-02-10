@@ -1,0 +1,35 @@
+symfony new my_project_name --versión="7.2.x" --webapp
+
+con composer:
+composer create-prokect symfony/skeleton:"7.2.x" my_project_name
+cd my_project_name
+composer require webapp
+
+----
+
+composer show symfony/orm-pack
+composer show symfony/maker-bundle
+composer show bundle
+
+composer require symfony/orm-pack
+composer require --dev symfony/make-bundle
+composer require --dev debug
+
+----
+symfony check:security
+
+DATABASE_URL="mysql://root:@127.0.0.1:3306/mascota_sana?serverVersion=10.4.32-MariaDB&charset=utf8mb4"
+
+php bin/console doctrine:database:create
+
+Crear la entidad Cliente
+Cliente(ID, nombre, direccion, email, telefono, fecha, alta)
+
+php bin/console make:entity
+
+---
+
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+
+php bin/console make:crud
