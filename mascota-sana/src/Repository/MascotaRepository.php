@@ -16,6 +16,19 @@ class MascotaRepository extends ServiceEntityRepository
         parent::__construct($registry, Mascota::class);
     }
 
+
+    public function findByLetra($letra): array
+{
+    return $this->createQueryBuilder('m')
+        ->where('m.nombre LIKE :letter')
+        ->setParameter('letter', '%' . strtoupper($letra) . '%')
+        ->orWhere('m.nombre LIKE :letter_javier')
+        ->setParameter('letter_javier', '%' . strtolower($letra) . '%') 
+        ->setMaxResults(100)
+        ->getQuery()
+        ->getResult();
+}
+
 //    /**
 //     * @return Mascota[] Returns an array of Mascota objects
 //     */
