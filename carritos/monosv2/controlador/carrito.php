@@ -12,11 +12,6 @@
     }
 
 
-    setcookie("carrito" , json_encode($_SESSION['carrito']), time()+60*60*24*30, "../");
-
-    header('Location: ../index.php?');
-
-
     function annadirCarrito($id_producto, $cantidad){
         if(!isset($_SESSION['carrito'])){
             $_SESSION['carrito'] = [];
